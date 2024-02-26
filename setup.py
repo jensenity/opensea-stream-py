@@ -38,7 +38,9 @@ setup(
     keywords=['opensea', 'nft', 'non fungible token', 'crypto', 'stream'],
     maintainer='Jerem',
     name='opensea-stream',
-    packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
+    # packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
+    packages=['opensea_sdk'],
+    package_dir={'opensea_sdk': 'opensea-stream'},
     test_suite='tests',
     url='https://github.com/jerempjerem/opensea-stream-py',
     project_urls={
