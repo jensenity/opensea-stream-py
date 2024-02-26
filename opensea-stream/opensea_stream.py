@@ -3,9 +3,9 @@ from realtime.channel import Channel
 from .utils import *
 
 class OpenseaStreamClient():
-    def __init__(self, api_key: str, network: Network = Network.MAINNET):
+    def __init__(self, api_key: str, network: Network = Network.MAINNET, **kwargs):
         socketUrl = f'{network}?token={api_key}'
-        self.socket = Socket(socketUrl)
+        self.socket = Socket(socketUrl, **kwargs)
 
         self.connected = False
         
